@@ -10,7 +10,8 @@ var api = builder.AddProject<Projects.AspireSample_ApiService>("apiservice")
     .WithReference(serviceBus);
 
 builder.AddProject<Projects.AspireSample_Web>("web")
-       .WithReference(api);
+       .WithReference(api)
+       .WithReference(cache);
 
 builder.AddProject<Projects.AspireSample_WorkerService>("aspiresample-workerservice")
     .WithReference(serviceBus);

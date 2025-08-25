@@ -10,7 +10,7 @@ public sealed class Worker(
     {
         var processor = client.CreateProcessor(
             "notifications",
-            "mobile",
+            "subscription1",
             new ServiceBusProcessorOptions());
 
         // Add handler to process messages
