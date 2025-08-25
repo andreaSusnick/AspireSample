@@ -14,7 +14,8 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddHttpClient<WeatherApiClient>(client =>
 {
-    // Use service discovery to call the API service
+    // Use service discovery to call the API service (Aspire)
+    // For individual testing, use: new("https://localhost:7109")
     client.BaseAddress = new("https://apiservice");
 });
 
